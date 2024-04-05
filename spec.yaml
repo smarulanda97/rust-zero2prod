@@ -13,13 +13,13 @@ services:
         value: ${newsletter.PASSWORD}
       - key: APP_DATABASE__HOST
         scope: RUN_TIME
-        value: ${newsletter.HOST}
+        value: ${newsletter.HOSTNAME}
       - key: APP_DATABASE__PORT
         scope: RUN_TIME
         value: ${newsletter.PORT}
       - key: APP_DATABASE__NAME
         scope: RUN_TIME
-        value: ${newsletter.NAME}
+        value: ${newsletter.DATABASE}
     dockerfile_path: Dockerfile
     source_dir: .
     github:
