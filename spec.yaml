@@ -4,6 +4,22 @@ name: zero2prod
 region: fra
 services:
   - name: zero2prod
+    env:
+      - key: APP_DATABASE__USER
+        scope: RUN_TIME
+        value: ${newsletter.USERNAME}
+      - key: APP_DATABASE__PASSWORD
+        scope: RUN_TIME
+        value: ${newsletter.PASSWORD}
+      - key: APP_DATABASE__HOST
+        scope: RUN_TIME
+        value: ${newsletter.HOST}
+      - key: APP_DATABASE__PORT
+        scope: RUN_TIME
+        value: ${newsletter.PORT}
+      - key: APP_DATABASE__NAME
+        scope: RUN_TIME
+        value: ${newsletter.NAME}
     dockerfile_path: Dockerfile
     source_dir: .
     github:
